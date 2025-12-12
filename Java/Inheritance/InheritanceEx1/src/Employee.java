@@ -1,0 +1,147 @@
+class Employee {
+
+	   int id;
+	   String name;
+	   double salary;
+	   
+	   Employee() {  //Default Constructor
+			System.out.println("Employee Default Constructor");
+			this.id = 1;
+			this.name ="Priya";
+			this.salary = 20000;
+	   }
+	   
+	Employee(int id, String name, double salary) { //parameterize Constructor
+		super();
+		System.out.println("Employee parameterize Constructor");
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	int getId() {
+		return id;
+	}
+	void setId(int id) {
+		this.id = id;
+	}
+	String getName() {
+		return name;
+	}
+	void setName(String name) {
+		this.name = name;
+	}
+	double getSalary() {
+		return salary;
+	}
+	void setSalary(double salary) {
+		this.salary = salary;
+	}
+	void Display()
+	{
+		System.out.println("Id is:"+this.id);
+		System.out.println("Name is:"+this.name);
+		System.out.println("Salary is:"+this.salary);
+	}
+	   
+}//Employee class ends here
+class HR extends Employee
+{
+	double commission;
+
+    HR()//Default Constructor
+    {
+    	super();
+    	System.out.println("HR Default Constructor");
+    	this.commission=4000;
+    }
+	HR(int id, String name, double salary,double commission) { //parameterize Constructor
+		super(id, name, salary);
+		System.out.println("HR parameterize Constructor");
+		this.commission = commission;
+	}
+    void Display()
+    {
+    	super.Display();
+    	System.out.println("Commission is:"+this.commission);
+    }
+}//HR class ends here
+class Admin extends Employee
+{
+	double allowance;
+
+	Admin()//Default Constructor
+	{
+		super();
+		System.out.println("Admin Default Constructor");
+		this.allowance=2000;
+	}
+	Admin(int id, String name, double salary,double allowance) { //parameterize Constructor
+		super(id, name, salary);
+		System.out.println("Admin parameterize Constructor");
+		this.allowance = allowance;
+	}
+	void Display()
+	{
+		super.Display();
+		System.out.println("Allowance is:"+this.allowance);
+	}
+}//Admin class ends here
+class SalesManager extends Employee
+{
+	double incentive;
+	double target;
+	
+	SalesManager() {  //Default Constructor
+		super();
+		System.out.println("SalesManager Default Constructor");
+		this.incentive=3000;
+		this.target=5000;
+	}
+	
+	SalesManager(int id, String name, double salary,double incentive,double target) {  //parameterize Constructor
+		super(id, name, salary);
+		System.out.println("SalesManager parameterize Constructor");
+		this.incentive=incentive;
+		this.target=target;
+	}
+	void Display()
+	{
+		super.Display();
+		System.out.println("incentive is:"+this.incentive);
+		System.out.println("target is:"+this.target);
+	}
+}//SalesManager class ends here
+class DemoInheritance
+{
+	public static void main(String[] args) {
+		System.out.println("\n......Employee Info.....");
+		
+		Employee e1=new Employee();
+		e1.Display();
+		
+		Employee e2=new Employee(2,"Aishwarya",30000);
+		e2.Display();
+		
+		System.out.println("\n.....HR Info.......");
+		
+		HR h1=new HR();
+		h1.Display();
+		
+		HR h2=new HR(3,"Riya",20000,5000);
+		h2.Display();
+		
+		System.out.println("\n.......Admin Info.....");
+		Admin a1=new Admin();
+		a1.Display();
+		
+		Admin a2=new Admin(4,"Rutuja",25000,2000);
+		a2.Display();
+		
+		System.out.println("\n......SalesManager Info......");
+		SalesManager s1=new SalesManager();
+		s1.Display();
+		
+		SalesManager s2=new SalesManager(5,"Neha",50000,5000,2000);
+		s2.Display();
+	}
+}//DemoInheritance class ends here
