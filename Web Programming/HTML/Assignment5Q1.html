@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+
+<form action="submit.html" method="post">
+
+    Name:<br>
+    <input type="text" 
+           name="username" 
+           placeholder="Enter your name" 
+           value="" 
+           maxlength="20" 
+           required>
+    <br><br>
+
+    Email:<br>
+    <input type="email" 
+           name="email" 
+           placeholder="Enter your email" 
+           required>
+    <br><br>
+
+    Password:<br>
+    <input type="password" 
+           name="password" 
+           placeholder="Enter password">
+    <br><br>
+
+    Age:<br>
+    <input type="number" 
+           name="age" 
+           value="18">
+    <br><br>
+
+    Gender:<br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <br><br>
+
+    Hobbies:<br>
+    <input type="checkbox" name="hobby" value="Reading"> Reading
+    <input type="checkbox" name="hobby" value="Sports"> Sports
+    <br><br>
+
+    Country:<br>
+    <input type="text" value="India" readonly>
+    <br><br>
+
+    Disabled Field:<br>
+    <input type="text" value="Not Editable" disabled>
+    <br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+
+</form>
+</body>
+</html>
